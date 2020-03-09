@@ -6,8 +6,8 @@ A small Node JS program to quickly check coronavirus statistics from https://www
 
 `clone https://github.com/JeffreyJoumjian/coronavirus.git`
 
-<span style="color:rgb(200,0,0);"> • Make sure you have Chrome installed on you computer. </span>
-<span style="color:rgb(200,0,0);"> • Make sure you have [NodeJS & npm](https://nodejs.org/en/) installed on your computer. </span>
+- Make sure you have Chrome installed on you computer. </span>
+- Make sure you have [NodeJS & npm](https://nodejs.org/en/) installed on your computer. </span>
 
 I have included the node_modules folder. It's always recommended to run `npm install` to make sure everything is up to date.
 
