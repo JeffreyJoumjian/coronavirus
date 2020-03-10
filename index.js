@@ -31,10 +31,16 @@ async function getCountryDetails(country) {
 
 			// if country is provided => get country row
 			if (countryName) {
-				console.log(countryName)
-				country = [...document.querySelectorAll('tbody tr td')].filter((e) => {
-					return e.innerText.toLowerCase() === countryName;
-				})[0].parentNode.children;
+
+				try {
+					country = [...document.querySelectorAll('tbody tr td')].filter((e) => {
+						return e.innerText.toLowerCase() === countryName;
+					})[0].parentNode.children;
+				} catch (e) {
+					console.error(`${countryName} is not a valid country`);
+
+					return;
+				}
 
 				function getNumber(element) {
 					return parseInt(element.innerText.trim().split(",").join("")) ? parseInt(element.innerText.trim().split(",").join("")) : 0;
@@ -65,6 +71,11 @@ async function getCountryDetails(country) {
 				} : undefined
 			}
 		}, countryName);
+
+		if (!result) {
+			console.error(`${countryName} is not a valid country`);
+			process.exit();
+		}
 
 		// printing
 		console.table({ cases: result.cases, deaths: result.deaths, deathRate: result.deathRate });
