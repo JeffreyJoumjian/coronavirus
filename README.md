@@ -32,10 +32,19 @@ connected to https://www.worldometers.info/coronavirus/
 ┌───────────┬───────────┐
 │  (index)  │  Values   │
 ├───────────┼───────────┤
-│   cases   │ '114,285' │
-│  deaths   │  '4,009'  │
-│ deathRate │  '3.51%'  │
+│   total   │ '119,378' │
+│    new    │   '455'   │
+│  deaths   │  '4,300'  │
+│ deathRate │  '3.6%'   │
 └───────────┴───────────┘
+┌───────────────┬──────────┐
+│    (index)    │  Values  │
+├───────────────┼──────────┤
+│    active     │ '48,495' │
+│   recovered   │ '66,583' │
+│    closed     │ '70,883' │
+│ realDeathRate │ '6.07%'  │
+└───────────────┴──────────┘
 ```
 
 2 - `node index.js <country-name>`
@@ -43,24 +52,33 @@ connected to https://www.worldometers.info/coronavirus/
 ```
 –> node index.js france
 connected to https://www.worldometers.info/coronavirus/
-┌───────────┬───────────┐
-│  (index)  │  Values   │
-├───────────┼───────────┤
-│   cases   │ '114,285' │
-│  deaths   │  '4,009'  │
-│ deathRate │  '3.51%'  │
-└───────────┴───────────┘
 ┌────────────┬──────────┐
 │  (index)   │  Values  │
 ├────────────┼──────────┤
 │  country   │ 'France' │
-│ totalCases │ '1,412'  │
-│  newCases  │   203    │
-│   deaths   │    30    │
-│ newDeaths  │    11    │
-│ deathRate  │ '2.12%'  │
+│ totalCases │ '1,784'  │
+│  newCases  │    0     │
+│   deaths   │    33    │
+│ newDeaths  │    0     │
+│ deathRate  │ '1.85%'  │
 │ recovered  │   '12'   │
-│   active   │ '1,370'  │
-│  critical  │    66    │
+│   active   │ '1,739'  │
+│  critical  │    86    │
 └────────────┴──────────┘
+┌───────────┬───────────┐
+│  (index)  │  Values   │
+├───────────┼───────────┤
+│   total   │ '119,378' │
+│    new    │   '455'   │
+│  deaths   │  '4,300'  │
+│ deathRate │  '3.6%'   │
+└───────────┴───────────┘
+┌───────────────┬──────────┐
+│    (index)    │  Values  │
+├───────────────┼──────────┤
+│    active     │ '48,495' │
+│   recovered   │ '66,583' │
+│    closed     │ '70,883' │
+│ realDeathRate │ '6.07%'  │
+└───────────────┴──────────┘
 ```
