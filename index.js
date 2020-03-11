@@ -39,12 +39,14 @@ async function getCountryDetails() {
 
 			const numbers = [...document.querySelectorAll('.maincounter-number > span')];
 			const table = [...document.querySelectorAll('tbody tr td')];
+			const overall = table.filter(e => e.innerText.toLowerCase() === 'total:')[0].parentNode.children;
 
 			// general numbers about the virus
 			const general = {
 				total: getNumber(numbers[0]),
-				new: getNumber(table.filter(e => e.innerText.toLowerCase() === 'total:')[0].parentNode.children[2]),
+				newCases: getNumber(overall[2]),
 				deaths: getNumber(numbers[1]),
+				newDeaths: getNumber(overall[4])
 			}
 			general.deathRate = `${parseFloat((general.deaths * 100 / general.total).toFixed(2))}%`
 
@@ -72,7 +74,7 @@ async function getCountryDetails() {
 				// if country is provided => add country property with details
 				country: country ? {
 					country: getInnerText(country[0]),
-					totalCases: getInnerText(country[1]),
+					total: getInnerText(country[1]),
 					newCases: getNumber(country[2]),
 					deaths: getNumber(country[3]),
 					newDeaths: getNumber(country[4]),
