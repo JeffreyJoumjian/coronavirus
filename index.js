@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer-core');
 
-// REPLACE this by opening Chrome and typing chrome://version and then copying the Execution Path.
+// REPLACE this by opening Chrome and typing chrome://version and then copying the Executable Path.
 const executablePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
 async function getCountryDetails() {
@@ -10,7 +10,7 @@ async function getCountryDetails() {
 
 	// if you provide a country name, you'll get another table about that country's status
 	// countries may return wrong values for new cases if the website hasn't set them properly
-	const countryName = process.argv[2] ? process.argv[2].toLowerCase().trim() : undefined;
+	const countryName = process.argv[2] ? process.argv.slice(2).join(" ").toLowerCase().trim() : undefined;
 
 	const browser = await puppeteer.launch({ executablePath });
 	let page;
@@ -89,7 +89,7 @@ async function getCountryDetails() {
 
 		// printing
 		result.country ? console.table(result.country) :
-			result.country === null ? console.error(`\n${countryName} is not a valid country`) : console.log();
+			!result.country && countryName ? console.error(`\nNo entries for "${countryName}" => Check if "${countryName}" is a valid country.`) : 0;
 		console.table(result.general);
 		console.table(result.detailed);
 
