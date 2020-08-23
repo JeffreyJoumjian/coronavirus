@@ -29,58 +29,62 @@ I have included the node_modules folder. It's always recommended to run `npm ins
 ```
 –> node index.js
 connected to https://www.worldometers.info/coronavirus/
-┌───────────┬───────────┐
-│  (index)  │  Values   │
-├───────────┼───────────┤
-│   total   │ '119,389' │
-│  deaths   │  '4,300'  │
-│ newCases  │   '466'   │
-│ newDeaths │   '26'    │
-│ deathRate │  '3.6%'   │
-└───────────┴───────────┘
-┌───────────────┬──────────┐
-│    (index)    │  Values  │
-├───────────────┼──────────┤
-│    active     │ '48,506' │
-│   recovered   │ '66,583' │
-│    closed     │ '70,883' │
-│ realDeathRate │ '6.07%'  │
-└───────────────┴──────────┘
+┌───────────┬──────────────┐
+│  (index)  │    Values    │
+├───────────┼──────────────┤
+│   total   │ '23,468,144' │
+│  active   │ '6,669,153'  │
+│ newCases  │   '96,958'   │
+│  deaths   │  '810,182'   │
+│ newDeaths │   '2,233'    │
+│ deathRate │   '3.45%'    │
+└───────────┴──────────────┘
+┌───────────────┬──────────────┐
+│    (index)    │    Values    │
+├───────────────┼──────────────┤
+│    closed     │ '16,798,991' │
+│   recovered   │ '15,988,809' │
+│ realDeathRate │   '4.82%'    │
+└───────────────┴──────────────┘
 ```
 
 2 - `node index.js <country-name>`
 
 ```
-–> node index.js italy
+-> node index.js "lebanon"
+
 connected to https://www.worldometers.info/coronavirus/
-┌────────────┬──────────┐
-│  (index)   │  Values  │
-├────────────┼──────────┤
-│  country   │ 'Italy'  │
-│    total   │ '10,149' │
-│  newCases  │    0     │
-│   deaths   │   631    │
-│ newDeaths  │    0     │
-│ deathRate  │ '6.22%'  │
-│ recovered  │ '1,004'  │
-│   active   │ '8,514'  │
-│  critical  │   877    │
-└────────────┴──────────┘
-┌───────────┬───────────┐
-│  (index)  │  Values   │
-├───────────┼───────────┤
-│   total   │ '119,389' │
-│  deaths   │  '4,300'  │
-│ newCases  │   '466'   │
-│ newDeaths │   '26'    │
-│ deathRate │  '3.6%'   │
-└───────────┴───────────┘
-┌───────────────┬──────────┐
-│    (index)    │  Values  │
-├───────────────┼──────────┤
-│    active     │ '48,506' │
-│   recovered   │ '66,583' │
-│    closed     │ '70,883' │
-│ realDeathRate │ '6.07%'  │
-└───────────────┴──────────┘
+┌───────────────┬─────────────┐
+│    (index)    │   Values    │
+├───────────────┼─────────────┤
+│    country    │  'Lebanon'  │
+│     total     │  '12,698'   │
+│   newCases    │     507     │
+│    deaths     │     123     │
+│   newDeaths   │      2      │
+│    active     │   '8,950'   │
+│   recovered   │   '3,625'   │
+│   critical    │     75      │
+│   deathRate   │   '0.97%'   │
+│ realDeathRate │   '3.28%'   │
+│     tests     │  '462,531'  │
+│  population   │ '6,820,890' │
+└───────────────┴─────────────┘
+┌───────────┬──────────────┐
+│  (index)  │    Values    │
+├───────────┼──────────────┤
+│   total   │ '23,469,609' │
+│  active   │ '6,670,323'  │
+│ newCases  │   '98,423'   │
+│  deaths   │  '810,242'   │
+│ newDeaths │   '2,293'    │
+│ deathRate │   '3.45%'    │
+└───────────┴──────────────┘
+┌───────────────┬──────────────┐
+│    (index)    │    Values    │
+├───────────────┼──────────────┤
+│    closed     │ '16,799,286' │
+│   recovered   │ '15,989,044' │
+│ realDeathRate │   '4.82%'    │
+└───────────────┴──────────────┘
 ```

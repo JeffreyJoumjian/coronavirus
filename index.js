@@ -58,6 +58,8 @@ async function getCountryDetails() {
 							break;
 						case 'total tests': indices.tests = ind;
 							break;
+						case 'population': indices.population = ind;
+							break;
 						default: break;
 					}
 				});
@@ -78,7 +80,8 @@ async function getCountryDetails() {
 						parseFloat(getNumber(country[indices.total]))).toFixed(2))}%`,
 					realDeathRate: `${parseFloat((getNumber(country[indices.deaths]) * 100 /
 						parseFloat(getNumber(country[indices.total]) - getNumber(country[indices.active]))).toFixed(2))}%`,
-					tests: getInnerText(country[indices.tests])
+					tests: getInnerText(country[indices.tests]),
+					population: getInnerText(country[indices.population])
 				}
 			}
 
@@ -130,8 +133,8 @@ async function getCountryDetails() {
 		}, countryName);
 
 		// printing
-		result.country ? console.table(result.country) :
-			!result.country && countryName ? console.error(`\nNo entries for "${countryName}" => Check if "${countryName}" is a valid country.`) : 0;
+		result.country ? console.table(result.country) : countryName &&
+			console.error(`\nNo entries for "${countryName}" => Check if "${countryName}" is a valid country.`);
 		console.table(result.general);
 		console.table(result.detailed);
 
